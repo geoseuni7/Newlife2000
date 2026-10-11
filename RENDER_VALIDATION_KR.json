@@ -1,0 +1,11 @@
+{
+  "file_count_target": 100,
+  "months": 321,
+  "first_month": "2000-01",
+  "last_month": "2026-09",
+  "bundle_count": 60,
+  "cloudflare_specific_files_removed": true,
+  "render_server_route_for_bundles": true,
+  "frontend_month_bundle_lookup": true,
+  "live_render_deploy_tested": false
+}

@@ -1,0 +1,10 @@
+{
+  "format": "bundled-monthly-json",
+  "bundle_files": 60,
+  "metadata_files": 2,
+  "total_files_expected": 100,
+  "months": 321,
+  "from": "2000-01",
+  "to": "2026-09",
+  "note": "Data rows were taken from the 100-file bundled dataset. This is packaging validation, not a live Render deployment test."
+}
