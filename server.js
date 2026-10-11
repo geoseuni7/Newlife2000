@@ -17,10 +17,10 @@ app.use(helmet({ contentSecurityPolicy: false }));
 app.use(express.json({ limit: '256kb' }));
 app.use('/api/auth', rateLimit({ windowMs: 15 * 60 * 1000, limit: 30, standardHeaders: true, legacyHeaders: false }));
 app.use('/api', rateLimit({ windowMs: 60 * 1000, limit: 120, standardHeaders: true, legacyHeaders: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
 
 // Serve market JSON files locally on Render (no Cloudflare R2 binding required).
-const marketDataDir = path.join(__dirname, 'market-data');
+const marketDataDir = __dirname;
 app.get('/data/*', (req, res) => {
   const requested = decodeURIComponent(req.path.slice('/data/'.length));
   if (!requested || requested.split('/').some(part => !part || part === '.' || part === '..' || part.includes('\\'))) {
